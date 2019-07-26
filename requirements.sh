@@ -1,4 +1,4 @@
-
+#author AviTiwary AnuragDhar SoumavoGuria
 # sudo yum -y update
 #     sudo yum -y install java-1.8.0-openjdk-devel
 #     sudo yum -y install wget
@@ -101,14 +101,14 @@ sudo echo -e "\t<role rolename=\"manager-gui\"/>
     sudo ls /opt/tomcat/webapps
 
     sudo systemctl start tomcat.service
-  
-    sudo yum -y install ruby 
+
+    sudo yum -y install ruby
 
 
     cd /home/centos
 
     #install code-deployagent on the ec2 instance
-    wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install  
+    wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 
     chmod +x ./install
     sudo ./install auto
@@ -173,7 +173,7 @@ EOF
     sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm
     sudo rpm -U ./amazon-cloudwatch-agent.rpm
     sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/cloudwatch-config.json -s
-                          
+
 
     cd ~
 
